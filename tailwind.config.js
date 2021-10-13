@@ -25,10 +25,27 @@ module.exports = {
       accent: colors.pewter,
       neutral: colors.white,
     },
+    fontSize: {
+      sm: ['14px', '22px'],
+      base: ['16px', '24px'],
+      lg: ['18px', '28px'],
+      xl: ['24px', '32px'],
+      '2xl': ['28px', '40px'],
+      '3xl': ['32px', '46px'],
+      '4xl': ['48px', '62px'],
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1.25rem',
+        sm: '2.5rem',
+        lg: '10rem',
+      },
+    },
     extend: {
       fontFamily: {
         primary: fonts.inter,
-      }
+      },
     },
   },
   variants: {
