@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed z-99 w-full py-5 transition-all" :class="{ 'opacity-0': scrollTop > 0 && isScrollingDown }">
+    <header class="fixed z-99 w-full py-5 transition-all lg:bg-primary lg:bg-opacity-75 lg:backdrop-filter lg:backdrop-blur-sm lg:backdrop-brightness-75" :class="{ 'opacity-0': scrollTop > 0 && isScrollingDown }">
         <div class="container-fluid flex items-center">
             <router-link to="/" class="mr-auto">
                 <div class="w-12 h-12 rounded-full bg-neutral bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: `url(${require('@/assets/images/logo.jpg')})` }"></div>
