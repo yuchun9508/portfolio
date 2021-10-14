@@ -46,6 +46,10 @@ module.exports = {
       fontFamily: {
         primary: fonts.inter,
       },
+      zIndex: {
+        '-1': '-1',
+        '99': '99',
+      },
     },
   },
   variants: {
