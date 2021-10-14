@@ -39,7 +39,8 @@ module.exports = {
       padding: {
         DEFAULT: '1.25rem',
         sm: '2.5rem',
-        lg: '10rem',
+        lg: '8rem',
+        xl: '10rem',
       },
     },
     extend: {
@@ -50,10 +51,17 @@ module.exports = {
         '-1': '-1',
         '99': '99',
       },
+      // for vertical image ratio
+      padding: {
+        '16/12': '133%',
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      filter: ['hover'],
+      inset: ['hover'],
+    },
   },
   plugins: [],
 }
