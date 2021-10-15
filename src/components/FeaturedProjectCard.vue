@@ -7,12 +7,14 @@
                     <div class="text-accent mb-1">Featured Project</div>
                     <h3 class="text-neutral mb-6 sm:mb-8 lg:mb-6" v-html="title"></h3>
                     <div class="text-neutral mb-6 sm:mb-8 lg:mb-4 lg:bg-secondary-dark lg:rounded lg:filter lg:drop-shadow-3xl lg:p-6" v-html="content"></div>
-                    <ul class="-mx-2 mb-6">
-                        <li v-for="(text, index) in list" :key="`item-${index}`" class="inline-block mx-2 my-1">{{ text }}</li>
-                    </ul>
-                    <a v-if="link" :href="link" target="_blank" rel="noopener noreferrer" class="inline-block p-6 -m-6">
-                        <span class="icon icon-external-link"></span>
-                    </a>
+                    <project-card-tag-list
+                        class="mb-6"
+                        :list="list"
+                    ></project-card-tag-list>
+                    <project-card-icon-list
+                        :source="source"
+                        :link="link"
+                    ></project-card-icon-list>
                 </div>
             </div>
             <div class="hidden lg:block col-span-5" :class="{ 'order-first': isReverse }">
@@ -25,8 +27,15 @@
 </template>
 
 <script>
+import ProjectCardIconList from '@/components/ProjectCardIconList.vue';
+import ProjectCardTagList from '@/components/ProjectCardTagList.vue';
+
 export default {
     name: 'FeaturedProjectCard',
+    components: {
+        ProjectCardIconList,
+        ProjectCardTagList
+    },
     props: {
         imageUrl: {
             type: String,
@@ -43,6 +52,10 @@ export default {
         list: {
             type: Array,
             default: () => [],
+        },
+        source: {
+            type: String,
+            default: () => '',
         },
         link: {
             type: String,

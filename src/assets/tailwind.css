@@ -33,10 +33,4 @@
     .icon {
         @apply inline-block w-6 h-6 bg-contain bg-center bg-no-repeat transition-all hover:opacity-75; /* m-6 */
     }
-    .icon-external-link {
-        background-image: url('../assets/images/icon-external-link.svg');
-    }
-    .icon-source-code {
-        background-image: url('../assets/images/icon-source-code.png');
-    }
 }

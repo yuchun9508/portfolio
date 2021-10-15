@@ -51,6 +51,7 @@
             :title="item.title"
             :content="item.content"
             :list="item.list"
+            :source="item.source"
             :link="item.link"
             :is-reverse="index % 2 === 0 ? true : false"
           ></featured-project-card>
@@ -111,6 +112,7 @@ export default {
             <p>This is one of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I built flexible front-end components, optimizing website responsiveness and cross-browser compatibility.</p>
           `,
           list: ['Vue.js', 'Nuxt.js', 'BootstrapVue', 'RWD'],
+          source: '',
           link: 'http://'
         },
         {
@@ -121,6 +123,7 @@ export default {
             <p>This is one of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I led front-end development, working closely with another developer to build components and meet desired functionality.</p>
           `,
           list: ['Vue.js', 'Nuxt.js', 'Bootstrap', 'Sass', 'RWD', 'SEO'],
+          source: '',
           link: 'http://'
         }
       ],
@@ -132,6 +135,7 @@ export default {
             <p>One of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I was in charge of front-end development independently, implementing BEM methodology to improve code maintainability.</p>
           `,
           list: ['Nuxt.js', 'Bootstrap', 'Sass', 'BEM'],
+          source: '',
           link: 'http://'
         },
         {
@@ -151,6 +155,7 @@ export default {
             <p>One of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I mainly focused on implementing interactive map functionality with dragging, zooming and mobile-friendly touch actions.</p>
           `,
           list: ['Nuxt.js', 'Bootstrap', 'Sass', 'JS'],
+          source: '',
           link: 'http://'
         },
         {

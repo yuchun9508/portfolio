@@ -1,30 +1,30 @@
 <template>
     <div class="flex flex-col bg-secondary-dark rounded py-10 px-5 sm:py-12 sm:px-10 lg:p-6 xl:p-10">
         <div class="text-right mb-6" :class="{ 'h-7': !source && !link }">
-            <ul class="-mx-3">
-                <li v-if="source" class="inline-block mx-3">
-                    <a :href="source" target="_blank" rel="noopener noreferrer" class="inline-block p-3 -m-3">
-                        <span class="icon icon-source-code"></span>
-                    </a>
-                </li>
-                <li v-if="link" class="inline-block mx-3">
-                    <a :href="link" target="_blank" rel="noopener noreferrer" class="inline-block p-3 -m-3">
-                        <span class="icon icon-external-link"></span>
-                    </a>
-                </li>
-            </ul>
+            <project-card-icon-list
+                :source="source"
+                :link="link"
+            ></project-card-icon-list>
         </div>
         <h3 class="text-neutral mb-4" v-html="title"></h3>
         <div class="text-neutral mb-5" v-html="content"></div>
-        <ul class="-mx-2 mt-auto">
-            <li v-for="(text, index) in list" :key="`item-${index}`" class="inline-block mx-2 my-1">{{ text }}</li>
-        </ul>
+        <project-card-tag-list
+            class="mt-auto"
+            :list="list"
+        ></project-card-tag-list>
     </div>
 </template>
 
 <script>
+import ProjectCardIconList from '@/components/ProjectCardIconList.vue';
+import ProjectCardTagList from '@/components/ProjectCardTagList.vue';
+
 export default {
     name: 'ProjectCard',
+    components: {
+        ProjectCardIconList,
+        ProjectCardTagList
+    },
     props: {
         title: {
             type: String,
