@@ -11,7 +11,7 @@
                     <li class="inline-block mx-8"><router-link to="/">Work</router-link></li>
                     <li class="inline-block mx-8"><router-link to="/">Contact</router-link></li>
                 </ul>
-                <a href="http://" class="button-accent">Resume</a>
+                <a href="https://drive.google.com/file/d/1DJ18ZgKjpqEf5dEsIiRYeSgQvJlFXcLU/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button-accent">Resume</a>
             </nav>
 
             <button class="hamburger-menu" :class="{ 'hamburger-menu--close': $store.state.isMenuOpened }" @click="toggleMenu">
@@ -25,7 +25,7 @@
                         <li class="my-8"><router-link to="/" class="block p-4">Work</router-link></li>
                         <li class="my-8"><router-link to="/" class="block p-4">Contact</router-link></li>
                     </ul>
-                    <a href="http://" class="button-accent inline-block">Resume</a>
+                    <a href="https://drive.google.com/file/d/1DJ18ZgKjpqEf5dEsIiRYeSgQvJlFXcLU/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button-accent inline-block">Resume</a>
                 </nav>
             </aside>
         </div>

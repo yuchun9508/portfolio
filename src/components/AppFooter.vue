@@ -3,12 +3,12 @@
     <div class="container-fluid text-center">
       <ul class="-mx-3 mb-4 lg:hidden">
         <li class="inline-block mx-3">
-          <a href="" target="_blank" rel="noopener noreferrer" class="inline-block p-3 -m-3">
+          <a :href="socialMedia.linkedin" target="_blank" rel="noopener noreferrer" class="inline-block p-3 -m-3">
             <span class="icon icon-linkedin-dark w-8 h-8"></span>
           </a>
         </li>
         <li class="inline-block mx-3">
-          <a href="" target="_blank" rel="noopener noreferrer" class="inline-block p-3 -m-3">
+          <a :href="socialMedia.github" target="_blank" rel="noopener noreferrer" class="inline-block p-3 -m-3">
             <span class="icon icon-github-dark w-8 h-8"></span>
           </a>
         </li>
@@ -19,8 +19,15 @@
 </template>
 
 <script>
+import { socialMedia } from '@/constants/global.js';
+
 export default {
-  name: 'AppFooter'
+  name: 'AppFooter',
+  data() {
+    return {
+      socialMedia: socialMedia
+    }
+  }
 }
 </script>
 

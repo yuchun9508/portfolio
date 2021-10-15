@@ -14,7 +14,7 @@
           <div>
             <h2 class="text-neutral mb-10">About Me</h2>
             <p class="mb-5">Hello! My name is Yu-Chun. I enjoy turning ideas into reality through design and technology. My interest in web development grew during my undergraduate years when I found it fascinating to create something useful that lives on the internet.</p>
-            <p class="mb-5">In my career up to now, I’ve had the privilege of working at <a href="" class="link-accent">a start-up</a> and <a href="" class="link-accent">a digital agency</a>. With professional knowledge and pratical experience accumulated, I’m now looking for a new opportunity to challenge myself and stimulate diverse potential.</p>
+            <p class="mb-5">In my career up to now, I’ve had the privilege of working at <a href="https://www.kkday.com" target="_blank" rel="noopener noreferrer" class="link-accent">a start-up</a> and <a href="https://tw.digisalad.cool/" target="_blank" rel="noopener noreferrer" class="link-accent">a digital agency</a>. With professional knowledge and pratical experience accumulated, I’m now looking for a new opportunity to challenge myself and stimulate diverse potential.</p>
             <p class="mb-5">Here are a few technologies I’ve been working with:</p>
             <div class="grid grid-cols-2">
               <ul class="list-inside list-disc">
@@ -117,22 +117,22 @@ export default {
           title: 'Tigerair Taiwan<br>Branding Website Revamp',
           content: `
             <p class="mb-3">A website for an airline that you could search for the latest flight information and more with multi-languages.</p>
-            <p>This is one of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I built flexible front-end components, optimizing website responsiveness and cross-browser compatibility.</p>
+            <p>This is one of the projects at <a href="https://tw.digisalad.cool/work/tigerairtw" target="_blank" rel="noopener noreferrer" class="link-accent">DigiSalad</a>.<br>I built flexible front-end components, optimizing website responsiveness and cross-browser compatibility.</p>
           `,
           list: ['Vue.js', 'Nuxt.js', 'BootstrapVue', 'RWD'],
           source: '',
-          link: 'http://'
+          link: 'https://www.tigerairtw.com/zh-tw'
         },
         {
           imageUrl: require('@/assets/images/project-langhamplace.jpg'),
           title: 'Langham Place Website',
           content: `
             <p class="mb-3">A website for a shopping mall that you could discover all kind of stores, special promotions and more.</p>
-            <p>This is one of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I led front-end development, working closely with another developer to build components and meet desired functionality.</p>
+            <p>This is one of the projects at <a href="https://tw.digisalad.cool/work/langham_place" target="_blank" rel="noopener noreferrer" class="link-accent">DigiSalad</a>.<br>I led front-end development, working closely with another developer to build components and meet desired functionality.</p>
           `,
           list: ['Vue.js', 'Nuxt.js', 'Bootstrap', 'Sass', 'RWD', 'SEO'],
           source: '',
-          link: 'http://'
+          link: 'https://www.langhamplace.com.hk/'
         }
       ],
       projects: [
@@ -140,11 +140,11 @@ export default {
           title: 'Wilson Group Website',
           content: `
             <p class="mb-3">A website for a transport service provider that introduces their new all-in-one engagement platform.</p>
-            <p>One of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I was in charge of front-end development independently, implementing BEM methodology to improve code maintainability.</p>
+            <p>One of the projects at <a href="https://tw.digisalad.cool/work/wilson-group-wil" target="_blank" rel="noopener noreferrer" class="link-accent">DigiSalad</a>.<br>I was in charge of front-end development independently, implementing BEM methodology to improve code maintainability.</p>
           `,
           list: ['Nuxt.js', 'Bootstrap', 'Sass', 'BEM'],
           source: '',
-          link: 'http://'
+          link: 'https://gowil.com.hk/'
         },
         {
           title: 'Personal Website V2',
@@ -154,17 +154,17 @@ export default {
           `,
           list: ['Vue.js', 'Tailwind CSS'],
           source: 'https://github.com/yuchun9508/v2',
-          link: ''
+          link: 'https://yuchun9508.github.io/v2/'
         },
         {
           title: 'Tai Kwun Campaign Site',
           content: `
             <p class="mb-3">An interactive campaign site for an on-site exhibition.</p>
-            <p>One of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I mainly focused on implementing interactive map functionality with dragging, zooming and mobile-friendly touch actions.</p>
+            <p>One of the projects at <a href="https://tw.digisalad.cool/work/taikwun" target="_blank" rel="noopener noreferrer" class="link-accent">DigiSalad</a>.<br>I mainly focused on implementing interactive map functionality with dragging, zooming and mobile-friendly touch actions.</p>
           `,
           list: ['Nuxt.js', 'Bootstrap', 'Sass', 'JS'],
           source: '',
-          link: 'http://'
+          link: 'https://www.taikwun.hk/serendipity-in-the-street/'
         },
         {
           title: 'Personal Website V1',
