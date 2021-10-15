@@ -40,7 +40,7 @@
       </div>
     </section>
 
-    <section id="work" class="py-24">
+    <section id="work" class="py-12 lg:py-24">
       <div class="container">
         <h2 class="text-neutral mb-14">Some Projects I’ve Worked On</h2>
         <div class="grid grid-cols-1 gap-y-6 mb-6 lg:gap-y-32 lg:mb-32">
@@ -84,6 +84,14 @@
         <div v-if="projects.length > 2" class="text-center my-14">
           <button class="button-accent text-center" @click="toggleShowMore">Show {{ showMore ? 'Less' : 'More' }}</button>
         </div>
+      </div>
+    </section>
+
+    <section id="contact" class="pt-12 pb-24 sm:pt-24 sm:pb-48">
+      <div class="container text-center">
+        <h2 class="text-neutral mb-10">Get In Touch</h2>
+        <p class="mb-10 lg:mx-auto lg:w-8/12 xl:w-6/12">I’m always down for a coffee, feel free to get in touch! Let’s talk about anything from my work, design, front-end development, user experience, and technology.</p>
+        <a href="mailto:yuchun9508@gmail.com" class="button-accent">Contact Me</a>
       </div>
     </section>
   </div>
