@@ -1,15 +1,15 @@
 <template>
     <header class="fixed z-99 w-full py-5 transition-all lg:bg-primary lg:bg-opacity-75 lg:backdrop-filter lg:backdrop-blur-sm lg:backdrop-brightness-75" :class="{ 'opacity-0': scrollTop > 0 && isScrollingDown }">
         <div class="container-fluid flex items-center">
-            <router-link to="/" class="mr-auto">
+            <a href="/" class="mr-auto">
                 <div class="w-12 h-12 rounded-full bg-neutral bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: `url(${require('@/assets/images/logo.jpg')})` }"></div>
-            </router-link>
+            </a>
 
             <nav class="hidden lg:flex lg:items-center">
                 <ul class="text-neutral mx-8">
-                    <li class="inline-block mx-8"><router-link to="/">About</router-link></li>
-                    <li class="inline-block mx-8"><router-link to="/">Work</router-link></li>
-                    <li class="inline-block mx-8"><router-link to="/">Contact</router-link></li>
+                    <li class="inline-block mx-8"><router-link to="#about">About</router-link></li>
+                    <li class="inline-block mx-8"><router-link to="#work">Work</router-link></li>
+                    <li class="inline-block mx-8"><router-link to="#contact">Contact</router-link></li>
                 </ul>
                 <a href="https://drive.google.com/file/d/1DJ18ZgKjpqEf5dEsIiRYeSgQvJlFXcLU/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button-accent">Resume</a>
             </nav>
@@ -21,9 +21,9 @@
             <aside class="sidebar" :class="{ 'sidebar--opened': $store.state.isMenuOpened }">
                 <nav class="text-center w-full">
                     <ul class="text-neutral text-lg -mt-8 mb-16">
-                        <li class="my-8"><router-link to="/" class="block p-4">About</router-link></li>
-                        <li class="my-8"><router-link to="/" class="block p-4">Work</router-link></li>
-                        <li class="my-8"><router-link to="/" class="block p-4">Contact</router-link></li>
+                        <li class="my-8"><router-link to="#about" class="block p-4">About</router-link></li>
+                        <li class="my-8"><router-link to="#work" class="block p-4">Work</router-link></li>
+                        <li class="my-8"><router-link to="#contact" class="block p-4">Contact</router-link></li>
                     </ul>
                     <a href="https://drive.google.com/file/d/1DJ18ZgKjpqEf5dEsIiRYeSgQvJlFXcLU/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="button-accent inline-block">Resume</a>
                 </nav>
@@ -39,6 +39,11 @@ export default {
         return {
             scrollTop: 0,
             isScrollingDown: false
+        }
+    },
+    watch: {
+        $route(to, from) {
+            this.$store.dispatch('toggleMenu', false);
         }
     },
     methods: {

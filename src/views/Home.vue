@@ -154,7 +154,7 @@ export default {
           `,
           list: ['Vue.js', 'Tailwind CSS'],
           source: 'https://github.com/yuchun9508/v2',
-          link: 'https://yuchun9508.github.io/v2/'
+          link: ''
         },
         {
           title: 'Tai Kwun Campaign Site',
