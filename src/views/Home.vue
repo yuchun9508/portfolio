@@ -43,7 +43,7 @@
     <section id="work" class="py-24">
       <div class="container">
         <h2 class="text-neutral mb-14">Some Projects I’ve Worked On</h2>
-        <div class="grid grid-cols-1 gap-y-6 sm:gap-y-10 lg:gap-y-32">
+        <div class="grid grid-cols-1 gap-y-6 mb-6 lg:gap-y-32 lg:mb-32">
           <featured-project-card 
             v-for="(item, index) in featuredProjects"
             :key="`item-${index}`"
@@ -55,6 +55,34 @@
             :is-reverse="index % 2 === 0 ? true : false"
           ></featured-project-card>
         </div>
+
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <project-card 
+            v-for="(item, index) in projects.slice(0, 2)"
+            :key="`item-${index}`"
+            :title="item.title"
+            :content="item.content"
+            :list="item.list"
+            :source="item.source"
+            :link="item.link"
+          ></project-card>
+        </div>
+
+        <div v-show="showMore" class="grid grid-cols-1 gap-6 mt-6 lg:grid-cols-2">
+          <project-card 
+            v-for="(item, index) in projects.slice(2)"
+            :key="`item-${index}`"
+            :title="item.title"
+            :content="item.content"
+            :list="item.list"
+            :source="item.source"
+            :link="item.link"
+          ></project-card>
+        </div>
+
+        <div v-if="projects.length > 2" class="text-center my-14">
+          <button class="button-accent text-center" @click="toggleShowMore">Show {{ showMore ? 'Less' : 'More' }}</button>
+        </div>
       </div>
     </section>
   </div>
@@ -62,14 +90,18 @@
 
 <script>
 import FeaturedProjectCard from '@/components/FeaturedProjectCard.vue';
+import ProjectCard from '@/components/ProjectCard.vue';
 
 export default {
   name: 'Home',
   components: {
-    FeaturedProjectCard
+    FeaturedProjectCard,
+    ProjectCard
   },
   data() {
     return {
+      showMore: false,
+      //
       featuredProjects: [
         {
           imageUrl: require('@/assets/images/project-tigerair.jpg'),
@@ -91,7 +123,52 @@ export default {
           list: ['Vue.js', 'Nuxt.js', 'Bootstrap', 'Sass', 'RWD', 'SEO'],
           link: 'http://'
         }
+      ],
+      projects: [
+        {
+          title: 'Wilson Group Website',
+          content: `
+            <p class="mb-3">A website for a transport service provider that introduces their new all-in-one engagement platform.</p>
+            <p>One of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I was in charge of front-end development independently, implementing BEM methodology to improve code maintainability.</p>
+          `,
+          list: ['Nuxt.js', 'Bootstrap', 'Sass', 'BEM'],
+          link: 'http://'
+        },
+        {
+          title: 'Personal Website V2',
+          content: `
+            <p class="mb-3">The second iteration of my portfolio website built with Vue CLI and hosted on GitHub pages.</p>
+            <p>I tried out Tailwind to set up the project and found it truly convenient to build structured styling system quickly.</p>
+          `,
+          list: ['Vue.js', 'Tailwind CSS'],
+          source: 'https://github.com/yuchun9508/v2',
+          link: ''
+        },
+        {
+          title: 'Tai Kwun Campaign Site',
+          content: `
+            <p class="mb-3">An interactive campaign site for an on-site exhibition.</p>
+            <p>One of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I mainly focused on implementing interactive map functionality with dragging, zooming and mobile-friendly touch actions.</p>
+          `,
+          list: ['Nuxt.js', 'Bootstrap', 'Sass', 'JS'],
+          link: 'http://'
+        },
+        {
+          title: 'Personal Website V1',
+          content: `
+            <p class="mb-3">The first portfolio website designed and built by myself in 2019.</p>
+            <p>I enjoyed the process from design to development. Also, I tried out some simple interactive design with CSS and jQuery to make the site a bit more interesting.</p>
+          `,
+          list: ['HTML', 'CSS', 'Bootstrap', 'jQuery'],
+          source: 'https://github.com/yuchun9508/v1',
+          link: 'https://yuchun9508.github.io/v1/'
+        }
       ]
+    }
+  },
+  methods: {
+    toggleShowMore() {
+      this.showMore = !this.showMore;
     }
   }
 }

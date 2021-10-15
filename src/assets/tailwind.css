@@ -36,4 +36,7 @@
     .icon-external-link {
         background-image: url('../assets/images/icon-external-link.svg');
     }
+    .icon-source-code {
+        background-image: url('../assets/images/icon-source-code.png');
+    }
 }

@@ -10,7 +10,7 @@
                     <ul class="-mx-2 mb-6">
                         <li v-for="(text, index) in list" :key="`item-${index}`" class="inline-block mx-2 my-1">{{ text }}</li>
                     </ul>
-                    <a :href="link" target="_blank" rel="noopener noreferrer" class="inline-block p-6 -m-6">
+                    <a v-if="link" :href="link" target="_blank" rel="noopener noreferrer" class="inline-block p-6 -m-6">
                         <span class="icon icon-external-link"></span>
                     </a>
                 </div>
