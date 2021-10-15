@@ -32,7 +32,7 @@
 
           <div>
             <div class="relative w-11/12 mx-auto sm:w-9/12 lg:w-full">
-              <div class="w-full pb-16/12 rounded bg-secondary-dark bg-cover bg-center bg-no-repeat relative z-10 filter grayscale brightness-75 transition-all hover:filter-none" :style="{ backgroundImage: `url(${require('@/assets/images/profile.jpg')})` }"></div>
+              <div class="image-filter w-full pb-16/12 rounded bg-secondary-dark bg-cover bg-center bg-no-repeat relative z-10" :style="{ backgroundImage: `url(${require('@/assets/images/profile.jpg')})` }"></div>
               <div class="w-full h-full rounded border border-solid border-accent absolute top-4 left-4 sm:top-6 sm:left-6"></div>
             </div>
           </div>
@@ -40,12 +40,59 @@
       </div>
     </section>
 
+    <section id="work" class="py-24">
+      <div class="container">
+        <h2 class="text-neutral mb-14">Some Projects I’ve Worked On</h2>
+        <div class="grid grid-cols-1 gap-y-6 sm:gap-y-10 lg:gap-y-32">
+          <featured-project-card 
+            v-for="(item, index) in featuredProjects"
+            :key="`item-${index}`"
+            :image-url="item.imageUrl"
+            :title="item.title"
+            :content="item.content"
+            :list="item.list"
+            :link="item.link"
+            :is-reverse="index % 2 === 0 ? true : false"
+          ></featured-project-card>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import FeaturedProjectCard from '@/components/FeaturedProjectCard.vue';
+
 export default {
   name: 'Home',
-  components: {}
+  components: {
+    FeaturedProjectCard
+  },
+  data() {
+    return {
+      featuredProjects: [
+        {
+          imageUrl: require('@/assets/images/project-tigerair.jpg'),
+          title: 'Tigerair Taiwan<br>Branding Website Revamp',
+          content: `
+            <p class="mb-3">A website for an airline that you could search for the latest flight information and more with multi-languages.</p>
+            <p>This is one of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I built flexible front-end components, optimizing website responsiveness and cross-browser compatibility.</p>
+          `,
+          list: ['Vue.js', 'Nuxt.js', 'BootstrapVue', 'RWD'],
+          link: 'http://'
+        },
+        {
+          imageUrl: require('@/assets/images/project-langhamplace.jpg'),
+          title: 'Langham Place Website',
+          content: `
+            <p class="mb-3">A website for a shopping mall that you could discover all kind of stores, special promotions and more.</p>
+            <p>This is one of the projects at <a href="" class="link-accent">DigiSalad</a>.<br>I led front-end development, working closely with another developer to build components and meet desired functionality.</p>
+          `,
+          list: ['Vue.js', 'Nuxt.js', 'Bootstrap', 'Sass', 'RWD', 'SEO'],
+          link: 'http://'
+        }
+      ]
+    }
+  }
 }
 </script>

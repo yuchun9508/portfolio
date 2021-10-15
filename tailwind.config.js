@@ -51,10 +51,17 @@ module.exports = {
         '-1': '-1',
         '99': '99',
       },
-      // for vertical image ratio
       padding: {
+        '9/12': '75%',
         '16/12': '133%',
       },
+      width: {
+        '14/12': '116%',
+        '22/12': '183%',
+      },
+      dropShadow: {
+        '3xl': '0 4px 10px rgba(0, 4, 1, 0.15)',
+      }
     },
   },
   variants: {
