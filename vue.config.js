@@ -2,10 +2,13 @@ const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
+
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/v2/' : '/',
+  publicPath: IS_PRODUCTION ? '/v2/' : '/',
+  outputDir: IS_PRODUCTION ? 'dist/v2/' : 'dist',
   configureWebpack(config) {
-    if (process.env.NODE_ENV === 'production') {
+    if (IS_PRODUCTION) {
       config.plugins.push(
         new PrerenderSPAPlugin({
           // Required - The path to the webpack-outputted app to prerender.
@@ -26,12 +29,9 @@ module.exports = {
             // eg, with `document.dispatchEvent(new Event('custom-render-trigger'))`
             renderAfterDocumentEvent: 'render-event',
 
-            // Optional - Wait to render until the specified element is detected using `document.querySelector`
-            // renderAfterElementExists: '[data-vue-meta]',
-            
             // Other puppeteer options.
             // (See here: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
-            headless: false // Display the browser window when rendering. Useful for debugging.
+            // headless: false // Display the browser window when rendering. Useful for debugging.
           }),
         })
       )
