@@ -12,5 +12,6 @@ Hello! Thanks for checking out the repo for my latest portfolio website built wi
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vue CLI](https://cli.vuejs.org/)
 - [Vue Meta](https://vue-meta.nuxtjs.org/)
+- [Prerender SPA Plugin](https://github.com/chrisvfritz/prerender-spa-plugin)
 - [VS Code](https://code.visualstudio.com/)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
