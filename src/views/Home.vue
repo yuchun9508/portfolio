@@ -149,8 +149,8 @@ export default {
         {
           title: 'Personal Website V2',
           content: `
-            <p class="mb-3">The second iteration of my portfolio website built with Vue CLI and hosted on GitHub pages.</p>
-            <p>I tried out Tailwind to set up the project and found it truly convenient to build structured styling system quickly.</p>
+            <p class="mb-3">The second iteration of my portfolio website built with Vue CLI and Tailwind CSS.</p>
+            <p>Giving my first try to Tailwind CSS, and I found it truly helpful to establish a structured styling system easily and quickly.</p>
           `,
           list: ['Vue.js', 'Tailwind CSS'],
           source: 'https://github.com/yuchun9508/v2',
