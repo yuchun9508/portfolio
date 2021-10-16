@@ -1,19 +1,16 @@
-# portfolio
+# My Portfolio Website V2 :raised_hands:
 
-## Project setup
-```
-npm install
-```
+Hello! Thanks for checking out the repo for my latest portfolio website built with [Vue CLI](https://cli.vuejs.org/) and [Tailwind CSS](https://tailwindcss.com/). Giving my first try to Tailwind CSS, and I found it truly helpful to establish a structured styling system easily and quickly :heart:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Getting started
+- `npm install -g @vue/cli`
+- `npm install`
+- `npm run serve` compiles and hot-reloads for development
+- `npm run build` compiles and minifies for production
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## What I used 
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vue CLI](https://cli.vuejs.org/)
+- [Vue Meta](https://vue-meta.nuxtjs.org/)
+- [VS Code](https://code.visualstudio.com/)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
